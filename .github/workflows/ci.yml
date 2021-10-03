@@ -1,9 +1,7 @@
 name: ci
 
 on:
-  push:
-    branches:
-      - "push"
+  - "push"
 
 jobs:
   docker:
