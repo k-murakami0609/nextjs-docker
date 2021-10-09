@@ -23,6 +23,11 @@ jobs:
       - name: set branch name2
         shell: bash
         run: echo "NAMED_BRANCH=${BRANCH_NAME}-${GTIHUB-SHA:0:10}" >> $GITHUB_ENV
+      - name: echo
+        shell: bash
+        run: |
+          echo $BRANCH_NAME
+          echo $NAMED_BRANCH
       # And make it available for the builds
       - name: Build and push
         uses: docker/build-push-action@v2
