@@ -19,10 +19,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: set branch name
         shell: bash
-        run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#ref/heads/})" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
       - name: set branch name2
         shell: bash
-        run: echo "NAMED_BRANCH=${BRANCH_NAME}-${GTIHUB-SHA:0:10}" >> $GITHUB_ENV
+        run: echo "NAMED_BRANCH=${BRANCH_NAME}-${GTIHUB_SHA:0:10}" >> $GITHUB_ENV
       - name: echo
         shell: bash
         run: |
