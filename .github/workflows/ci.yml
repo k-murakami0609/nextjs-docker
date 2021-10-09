@@ -28,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: kmurakami/nextjs-test2:${NAMED_BRANCH}
+          tags: kmurakami/nextjs-test2:${{ env.NAMED_BRANCH }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           target: runner
