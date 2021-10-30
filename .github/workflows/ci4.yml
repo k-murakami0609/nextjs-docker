@@ -1,8 +1,6 @@
 name: ci4
 
-on:
-  check_suite:
-    types: [rerequested, completed]
+on: status
 
 jobs:
   docker:
