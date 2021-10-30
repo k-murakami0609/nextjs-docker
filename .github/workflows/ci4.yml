@@ -2,7 +2,7 @@ name: ci4
 
 on:
   check_suite:
-    types: [rerequested, completed]
+    types: [rerequested, completed, requested]
 
 jobs:
   docker:
