@@ -2,7 +2,7 @@ name: ci3
 
 on:
   push:
-    branch: devel
+    branches: devel
 
 jobs:
   docker:
