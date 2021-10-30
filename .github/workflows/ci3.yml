@@ -1,7 +1,8 @@
 name: ci3
 
 on:
-  - "push"
+  push:
+    branch: devel
 
 jobs:
   docker:
