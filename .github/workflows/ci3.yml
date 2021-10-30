@@ -1,0 +1,11 @@
+name: ci3
+
+on:
+  - "push"
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        run: echo "step3"

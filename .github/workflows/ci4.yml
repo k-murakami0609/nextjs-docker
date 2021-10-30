@@ -1,0 +1,14 @@
+name: ci4
+
+on:
+  workflow_run:
+    workflows: ["ci2", "ci3"]
+    branches: [master]
+    types: [requested]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        run: echo "step4"

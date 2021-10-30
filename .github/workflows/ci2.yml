@@ -1,0 +1,11 @@
+name: ci2
+
+on:
+  - "push"
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        run: echo "step2"
