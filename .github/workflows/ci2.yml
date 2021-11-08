@@ -1,11 +1,18 @@
 name: ci2
 
 on:
-  - "push"
+  push:
+    branches:
+      - master
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        run: echo "step2"
+        run: echo {{ github.event_name }}
